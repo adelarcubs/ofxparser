@@ -1,8 +1,9 @@
 <?php
-namespace Adelarcubs\OFXParser;
+namespace Adelarcubs\OFXParser\Unit;
 
 use PHPUnit_Framework_TestCase;
 use SimpleXMLElement;
+use Adelarcubs\OFXParser\Ofx;
 
 /**
  *
@@ -15,8 +16,7 @@ class OfxTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        // $this->ofx = new Ofx(new SimpleXMLElement('fixtures/data.ofx'));
-        $this->ofx = Ofx::loadFromFile(__DIR__ . '/fixtures/data.ofx');
+        $this->ofx = Ofx::loadFromFile(__DIR__ . '/../fixtures/data.ofx');
     }
 
     /**
