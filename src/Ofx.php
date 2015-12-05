@@ -25,11 +25,10 @@ class Ofx
      */
     public static function loadFromFile($ofxFilePath)
     {
-        if (file_exists($ofxFilePath)) {
-            return static::loadFromString(file_get_contents($ofxFilePath));
-        } else {
+        if (! file_exists($ofxFilePath)) {
             throw new \InvalidArgumentException("File '{$ofxFilePath}' could not be found");
         }
+        return static::loadFromString(file_get_contents($ofxFilePath));
     }
 
     /**

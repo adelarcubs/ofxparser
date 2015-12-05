@@ -26,4 +26,11 @@ class OfxTest extends PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf(Ofx::class, $this->ofx);
     }
+    /**
+     * @test
+     * @expectedException InvalidArgumentException
+     */
+    public function invalidFile(){
+        $ofx = Ofx::loadFromFile('Anywhere');
+    }
 }
