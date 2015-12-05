@@ -12,14 +12,14 @@ class Ofx
 
     /**
      *
-     * @param SimpleXMLElement $xml
+     * @param SimpleXMLElement $xml            
      */
     public function __construct(SimpleXMLElement $xml)
     {}
 
     /**
      *
-     * @param unknown $ofxFilePath
+     * @param unknown $ofxFilePath            
      * @throws \InvalidArgumentException
      * @return \Adelarcubs\OFXParser\Ofx
      */
@@ -34,7 +34,7 @@ class Ofx
 
     /**
      *
-     * @param unknown $xmlString
+     * @param unknown $xmlString            
      * @throws \Exception
      * @return \Adelarcubs\OFXParser\Ofx
      */
@@ -55,7 +55,7 @@ class Ofx
     private static function closeUnclosedXmlTags($ofxContent)
     {
         $sgmlStart = stripos($ofxContent, '<OFX>');
-        $xml = trim(substr($xml, $sgmlStart));
+        $xml = trim(substr($ofxContent, $sgmlStart));
         
         $xml = str_replace("\r", "", $xml);
         $xml = str_replace("\n", "", $xml);
@@ -79,8 +79,9 @@ class Ofx
                         $line .= '<' . $lastClosedTag;
                     }
                 } else {
-                    if ($lastClosedTag == $tag)
+                    if ($lastClosedTag == $tag) {
                         $line = '';
+                    }
                 }
                 $xml .= $line . "\n";
             }

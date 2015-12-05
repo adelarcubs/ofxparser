@@ -10,11 +10,13 @@ use SimpleXMLElement;
  */
 class OfxTest extends PHPUnit_Framework_TestCase
 {
+
     private $ofx;
 
     protected function setUp()
     {
-        $this->ofx = new Ofx(new SimpleXMLElement('<xml></xml>'));
+        // $this->ofx = new Ofx(new SimpleXMLElement('fixtures/data.ofx'));
+        $this->ofx = Ofx::loadFromFile(__DIR__ . '/fixtures/data.ofx');
     }
 
     /**

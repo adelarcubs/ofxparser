@@ -1,0 +1,303 @@
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+    <SIGNONMSGSRSV1>
+        <SONRS>
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <DTSERVER>20131003022034[-3:GMT]
+            <LANGUAGE>ENG
+            <FI>
+                <ORG>SANTANDER
+                <FID>SANTANDER
+            </FI>
+        </SONRS>
+    </SIGNONMSGSRSV1>
+    <BANKMSGSRSV1>
+        <STMTTRNRS>
+            <TRNUID>1
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <STMTRS>
+                <CURDEF>BRL
+                <BANKACCTFROM>
+                    <BANKID>033
+                    <ACCTID>0239010162619
+                    <ACCTTYPE>CHECKING
+                </BANKACCTFROM>
+                <BANKTRANLIST>
+                    <DTSTART>20131003022034[-3:GMT]
+                    <DTEND>20131003022034[-3:GMT]
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130903000000[-3:GMT]
+                        <TRNAMT>           7000,00
+                        <FITID>00482399
+                        <CHECKNUM>00482399
+                        <PAYEEID>0
+                        <MEMO>TRANSFERENCIA ENTRE CONTAS         DE: 15.095.735/0001-13   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130903000000[-3:GMT]
+                        <TRNAMT>            -84.62
+                        <FITID>00030310
+                        <CHECKNUM>00030310
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CONTA CELULAR EM CANAIS  INTERNET TIM CELULAR SA  
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130904000000[-3:GMT]
+                        <TRNAMT>             -6,00
+                        <FITID>00083265
+                        <CHECKNUM>00083265
+                        <PAYEEID>0
+                        <MEMO>COMPRA CARTAO MAESTRO              04/09 LEALIS COMERC I    
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130906000000[-3:GMT]
+                        <TRNAMT>           -488.50
+                        <FITID>00125058
+                        <CHECKNUM>00125058
+                        <PAYEEID>0
+                        <MEMO>EMISSAO DE DOC E VIA BCE           USER     
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130909000000[-3:GMT]
+                        <TRNAMT>           -239,00
+                        <FITID>00213008
+                        <CHECKNUM>00213008
+                        <PAYEEID>0
+                        <MEMO>PGTO TITULO OUTRO BCO - INTERNET   UNINOVE                  
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130913000000[-3:GMT]
+                        <TRNAMT>          -1100,00
+                        <FITID>00212776
+                        <CHECKNUM>00212776
+                        <PAYEEID>0
+                        <MEMO>TRANSF VALOR P/ CONTA DIF TITULAR  user          
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130913000000[-3:GMT]
+                        <TRNAMT>           -500,00
+                        <FITID>00433737
+                        <CHECKNUM>00433737
+                        <PAYEEID>0
+                        <MEMO>TRANSF VALOR P/ CONTA DIF TITULAR  USER          
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>            -20,00
+                        <FITID>00604390
+                        <CHECKNUM>00604390
+                        <PAYEEID>0
+                        <MEMO>SAQUE ATM INTERAGENCIA                                      
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>           -100,00
+                        <FITID>00372013
+                        <CHECKNUM>00372013
+                        <PAYEEID>0
+                        <MEMO>TRANSF VALOR P/ CONTA DIF TITULAR  USER        
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>           -484.60
+                        <FITID>00210625
+                        <CHECKNUM>00210625
+                        <PAYEEID>0
+                        <MEMO>PGTO TITULO OUTRO BCO - INTERNET   USER                
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>           -183.25
+                        <FITID>00210818
+                        <CHECKNUM>00210818
+                        <PAYEEID>0
+                        <MEMO>PGTO TITULO OUTRO BCO - INTERNET   CC SUB                   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>          -3389.13
+                        <FITID>00210850
+                        <CHECKNUM>00210850
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CARTAO CREDITO BCE       16/09 21:08 CARTAO MASTER
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130916000000[-3:GMT]
+                        <TRNAMT>          -1621.91
+                        <FITID>00210913
+                        <CHECKNUM>00210913
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CARTAO CREDITO BCE       16/09 21:09 CARTAO VISA  
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130920000000[-3:GMT]
+                        <TRNAMT>            -60,00
+                        <FITID>00602171
+                        <CHECKNUM>00602171
+                        <PAYEEID>0
+                        <MEMO>SAQUE ATM INTERAGENCIA                                      
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130920000000[-3:GMT]
+                        <TRNAMT>            -13,00
+                        <FITID>00160310
+                        <CHECKNUM>00160310
+                        <PAYEEID>0
+                        <MEMO>RECARGA TELEFONE CELULAR           IB 99 *****9999 TIM SC   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130923000000[-3:GMT]
+                        <TRNAMT>            -13,00
+                        <FITID>00170310
+                        <CHECKNUM>00170310
+                        <PAYEEID>0
+                        <MEMO>RECARGA TELEFONE CELULAR           IB 99 *****9999 TIM SC   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130924000000[-3:GMT]
+                        <TRNAMT>           -120,00
+                        <FITID>00000005
+                        <CHECKNUM>00000005
+                        <PAYEEID>0
+                        <MEMO>CHEQUE EMITIDO/DEBITADO                                     
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130925000000[-3:GMT]
+                        <TRNAMT>            -60,00
+                        <FITID>00601164
+                        <CHECKNUM>00601164
+                        <PAYEEID>0
+                        <MEMO>SAQUE ATM INTERAGENCIA                                      
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130926000000[-3:GMT]
+                        <TRNAMT>           -275.66
+                        <FITID>00200310
+                        <CHECKNUM>00200310
+                        <PAYEEID>0
+                        <MEMO>PGTO CONTA DE TELEFONE EM CANAIS   INTERNET TELEFONICA      
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130926000000[-3:GMT]
+                        <TRNAMT>            -38.13
+                        <FITID>00210310
+                        <CHECKNUM>00210310
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CONTA LUZ EM CANAIS      INTERNET AES ELETROPAULO 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130926000000[-3:GMT]
+                        <TRNAMT>            -40.51
+                        <FITID>00220310
+                        <CHECKNUM>00220310
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CONTA LUZ EM CANAIS      INTERNET AES ELETROPAULO 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130926000000[-3:GMT]
+                        <TRNAMT>            -35.89
+                        <FITID>00230310
+                        <CHECKNUM>00230310
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CONTA LUZ EM CANAIS      INTERNET AES ELETROPAULO 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130926000000[-3:GMT]
+                        <TRNAMT>           -105.17
+                        <FITID>00240310
+                        <CHECKNUM>00240310
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO CONTA CELULAR EM CANAIS  INTERNET TIM CELULAR SA  
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130927000000[-3:GMT]
+                        <TRNAMT>            -90,00
+                        <FITID>00014665
+                        <CHECKNUM>00014665
+                        <PAYEEID>0
+                        <MEMO>COMPRA CARTAO MAESTRO              27/09 ESTACAO PALMEIR    
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130930000000[-3:GMT]
+                        <TRNAMT>            -45,00
+                        <FITID>00260310
+                        <CHECKNUM>00260310
+                        <PAYEEID>0
+                        <MEMO>TARIFA MENSALIDADE PACOTE SERVICOS  AGOSTO / 2013           
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130930000000[-3:GMT]
+                        <TRNAMT>           7402,00
+                        <FITID>00270310
+                        <CHECKNUM>00270310
+                        <PAYEEID>0
+                        <MEMO>TED CONTA SALARIO                  user    
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130930000000[-3:GMT]
+                        <TRNAMT>           -318.80
+                        <FITID>00150147
+                        <CHECKNUM>00150147
+                        <PAYEEID>0
+                        <MEMO>PGTO TITULO OUTRO BCO - INTERNET   CEF                      
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20130930000000[-3:GMT]
+                        <TRNAMT>            -90,00
+                        <FITID>00601164
+                        <CHECKNUM>00601164
+                        <PAYEEID>0
+                        <MEMO>SAQUE ATM INTERAGENCIA                                      
+                    </STMTTRN>
+                </BANKTRANLIST>
+                <LEDGERBAL>
+                    <BALAMT>           3781.05
+                    <DTASOF>20131003022034[-3:GMT]
+                </LEDGERBAL>
+            </STMTRS>
+        </STMTTRNRS>
+    </BANKMSGSRSV1>
+</OFX>
