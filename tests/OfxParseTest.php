@@ -18,7 +18,10 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
      * @expectedException Exception
      */
     public function wrongXmlFormat()
-    {$a=new OfxParser('<OFX><root></rot></OFX>');}
+    {
+        $a = new OfxParser('<OFX><root></rot></OFX>');
+        $this->assertNull($a);
+    }
 
     /**
      * @test
