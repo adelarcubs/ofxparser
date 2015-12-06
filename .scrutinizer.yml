@@ -10,6 +10,7 @@ tools:
     php_pdepend: true
     php_analyzer: true
     php_changetracking: true
+    external_code_coverage: true
     php_code_sniffer:
         enabled: true
         filter:
