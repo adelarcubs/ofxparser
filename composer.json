@@ -1,6 +1,6 @@
 {
   "name" : "adelarcubs/ofxparser",
-  "description" : "ofcparser",
+  "description" : "ofxparser",
   "require" : {
     "php" : ">=5.5"
   },
