@@ -20,13 +20,15 @@ class Ofx
         $this->exportMovements($xml->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN);
     }
 
-    public function getMovements(){
-    	return $this->movements;
+    public function getMovements()
+    {
+        return $this->movements;
     }
 
-    private function exportMovements(SimpleXMLElement $xml){
-    	foreach ($xml as $value) {
-    		$this->movements[] = new OfxMovement($value);
-    	}
+    private function exportMovements(SimpleXMLElement $xml)
+    {
+        foreach ($xml as $value) {
+            $this->movements[] = new OfxMovement($value);
+        }
     }
 }

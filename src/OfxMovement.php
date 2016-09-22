@@ -2,6 +2,7 @@
 namespace Adelarcubs\OFXParser;
 
 use SimpleXMLElement;
+
 /**
  *
  * @author Adelar Tiemann Junior <adelar@adelarcubs.com>
@@ -16,7 +17,8 @@ class OfxMovement
         $this->description = $xml->MEMO;
     }
 
-    public function getDescription(){
-    	return $this->description;
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
