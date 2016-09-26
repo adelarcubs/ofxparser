@@ -2,7 +2,7 @@
 namespace Adelarcubs\OFXParser;
 
 use SimpleXMLElement;
-use Datatime;
+use DateTime;
 
 /**
  *
@@ -24,7 +24,7 @@ class OfxMovement
         $this->document = $xml->FITID;
         $this->description = $xml->MEMO;
         $this->amount = (float) str_replace(',', '.', $xml->TRNAMT);
-        $this->dueDate = new DateTime(substr($this->DTPOSTED, 0, 8));
+        $this->dueDate = new DateTime(substr($xml->DTPOSTED, 0, 8));
     }
 
     public function getDocument()
