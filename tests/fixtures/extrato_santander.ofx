@@ -1,0 +1,267 @@
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+    <SIGNONMSGSRSV1>
+        <SONRS>
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <DTSERVER>20160927175217[-3:GMT]
+            <LANGUAGE>ENG
+            <FI>
+                <ORG>SANTANDER
+                <FID>SANTANDER
+            </FI>
+        </SONRS>
+    </SIGNONMSGSRSV1>
+    <BANKMSGSRSV1>
+        <STMTTRNRS>
+            <TRNUID>1
+            <STATUS>
+                <CODE>0
+                <SEVERITY>INFO
+            </STATUS>
+            <STMTRS>
+                <CURDEF>BRL
+                <BANKACCTFROM>
+                    <BANKID>033
+                    <ACCTID>1234123412342134
+                    <ACCTTYPE>CHECKING
+                </BANKACCTFROM>
+                <BANKTRANLIST>
+                    <DTSTART>20160927175217[-3:GMT]
+                    <DTEND>20160927175217[-3:GMT]
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160801000000[-3:GMT]
+                        <TRNAMT>           -560,00
+                        <FITID>00000038
+                        <CHECKNUM>00000038
+                        <PAYEEID>0
+                        <MEMO>CHEQUE EMITIDO/DEBITADO                                     
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160801000000[-3:GMT]
+                        <TRNAMT>              0.07
+                        <FITID>00032709
+                        <CHECKNUM>00032709
+                        <PAYEEID>0
+                        <MEMO>REMUNERACAO CONTAMAX CDB DI                                 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160802000000[-3:GMT]
+                        <TRNAMT>            600,00
+                        <FITID>00042709
+                        <CHECKNUM>00042709
+                        <PAYEEID>0
+                        <MEMO>TED DIFERENTE TITULARIDADE CIP     AIUHFIAS SDFASIDUFHA SDF    
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160802000000[-3:GMT]
+                        <TRNAMT>             -0.04
+                        <FITID>00052709
+                        <CHECKNUM>00052709
+                        <PAYEEID>0
+                        <MEMO>IOF IMPOSTO OPERACOES FINANCEIRAS  PERIODO: 01/08 A 01/08/16
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160802000000[-3:GMT]
+                        <TRNAMT>             -1.90
+                        <FITID>00062709
+                        <CHECKNUM>00062709
+                        <PAYEEID>0
+                        <MEMO>IOF ADICIONAL - AUTOMATICO         PERIODO: 01/08 A 01/08/16
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160803000000[-3:GMT]
+                        <TRNAMT>            -51.80
+                        <FITID>00072709
+                        <CHECKNUM>00072709
+                        <PAYEEID>0
+                        <MEMO>TARIFA ADIANTAMENTO DEPOSITANTE    01/08/2016               
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160803000000[-3:GMT]
+                        <TRNAMT>            100,00
+                        <FITID>00082709
+                        <CHECKNUM>00082709
+                        <PAYEEID>0
+                        <MEMO>RESGATE CDB/RDB                                             
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160803000000[-3:GMT]
+                        <TRNAMT>            -80.07
+                        <FITID>00092709
+                        <CHECKNUM>00092709
+                        <PAYEEID>0
+                        <MEMO>PGTO LICENCIAMENTO VEICULOS CANAIS INTERNET LICENCIAMENTO EL
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160805000000[-3:GMT]
+                        <TRNAMT>            -45.61
+                        <FITID>00102709
+                        <CHECKNUM>00102709
+                        <PAYEEID>0
+                        <MEMO>DEBITO TITULO DE CAPITALIZACAO     SANTANDER CAP            
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160816000000[-3:GMT]
+                        <TRNAMT>            705.09
+                        <FITID>00112709
+                        <CHECKNUM>00112709
+                        <PAYEEID>0
+                        <MEMO>RESGATE CDB/RDB                                             
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160816000000[-3:GMT]
+                        <TRNAMT>           -700,00
+                        <FITID>00542789
+                        <CHECKNUM>00542789
+                        <PAYEEID>0
+                        <MEMO>TRANSF VALOR P/ CONTA DIF TITULAR  ASDFAD DSFD ASDFAS   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160831000000[-3:GMT]
+                        <TRNAMT>            825,00
+                        <FITID>00043967
+                        <CHECKNUM>00043967
+                        <PAYEEID>0
+                        <MEMO>TRANSFERENCIA ENTRE CONTAS         ASDFASD SADF EWV S VF   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160901000000[-3:GMT]
+                        <TRNAMT>           -560,00
+                        <FITID>00000039
+                        <CHECKNUM>00000039
+                        <PAYEEID>0
+                        <MEMO>CHEQUE EMITIDO/DEBITADO                                     
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160901000000[-3:GMT]
+                        <TRNAMT>              0.04
+                        <FITID>00152709
+                        <CHECKNUM>00152709
+                        <PAYEEID>0
+                        <MEMO>REMUNERACAO CONTAMAX CDB DI                                 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160902000000[-3:GMT]
+                        <TRNAMT>           -100,00
+                        <FITID>00604348
+                        <CHECKNUM>00604348
+                        <PAYEEID>0
+                        <MEMO>SAQUE NO ATM INTERAGENCIA                                   
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160905000000[-3:GMT]
+                        <TRNAMT>            -45.61
+                        <FITID>00172709
+                        <CHECKNUM>00172709
+                        <PAYEEID>0
+                        <MEMO>DEBITO TITULO DE CAPITALIZACAO     SANTANDER CAP            
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160906000000[-3:GMT]
+                        <TRNAMT>            -68.10
+                        <FITID>00182709
+                        <CHECKNUM>00182709
+                        <PAYEEID>0
+                        <MEMO>PAGAMENTO DE MULTA TRANSITO CANAIS INTERNET LICENCIAMENTO EL
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160906000000[-3:GMT]
+                        <TRNAMT>            759.07
+                        <FITID>00010906
+                        <CHECKNUM>00010906
+                        <PAYEEID>0
+                        <MEMO>RESGATE TITULO DE CAPITALIZACAO    SANTANDER  03209092000102
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160908000000[-3:GMT]
+                        <TRNAMT>             -8.50
+                        <FITID>00301676
+                        <CHECKNUM>00301676
+                        <PAYEEID>0
+                        <MEMO>COMPRA CARTAO MAESTRO              08/09 GRAO EXPRESSO C    
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160908000000[-3:GMT]
+                        <TRNAMT>             45.61
+                        <FITID>00010908
+                        <CHECKNUM>00010908
+                        <PAYEEID>0
+                        <MEMO>RESGATE TITULO DE CAPITALIZACAO    SANTANDER  03209092000102
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160908000000[-3:GMT]
+                        <TRNAMT>           -860,00
+                        <FITID>00180352
+                        <CHECKNUM>00180352
+                        <PAYEEID>0
+                        <MEMO>EMISSAO DE DOC D VIA BCE           341-9646-00000000680     
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160908000000[-3:GMT]
+                        <TRNAMT>              0.02
+                        <FITID>00232709
+                        <CHECKNUM>00232709
+                        <PAYEEID>0
+                        <MEMO>REMUNERACAO CONTAMAX CDB DI                                 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160914000000[-3:GMT]
+                        <TRNAMT>            100,00
+                        <FITID>00200010
+                        <CHECKNUM>00200010
+                        <PAYEEID>0
+                        <MEMO>DEPOSITO EM DINHEIRO NO ATM                                 
+                    </STMTTRN>
+                    <STMTTRN>
+                        <TRNTYPE>OTHER
+                        <DTPOSTED>20160915000000[-3:GMT]
+                        <TRNAMT>           -100,00
+                        <FITID>00262843
+                        <CHECKNUM>00262843
+                        <PAYEEID>0
+                        <MEMO>TRANSFERENCIA PARA CONTA POUPANCA  VSFVS SVSFV    
+                    </STMTTRN>
+                </BANKTRANLIST>
+                <LEDGERBAL>
+                    <BALAMT>             11.54
+                    <DTASOF>20160927175217[-3:GMT]
+                </LEDGERBAL>
+            </STMTRS>
+        </STMTTRNRS>
+    </BANKMSGSRSV1>
+</OFX>

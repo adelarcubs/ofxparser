@@ -26,33 +26,34 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @dataProvider ofxDataProvider
      */
-    public function parseDiferentOFxBankFile($file)
+    public function itau()
     {
-        // $ofx = Ofx::loadFromFile($file);
-        // $this->assertInstanceOf(Ofx::class, $ofx);
-        $ofx = OfxParser::loadOfx($file);
+        $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_itau.ofx');
         $this->assertInstanceOf(Ofx::class, $ofx);
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
 
-    public function ofxDataProvider()
+    /**
+     * @test
+     */
+    public function santander()
     {
-        return [
-            [
-                __DIR__ . '/fixtures/data.ofx'
-            ],
-            [
-                __DIR__ . '/fixtures/data2.ofx'
-            ],
-            [
-                __DIR__ . '/fixtures/caixa_julho.ofx'
-            ],
-            [
-                __DIR__ . '/fixtures/extrato_itau_maio.ofx'
-            ]
-        ];
+        $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_santander.ofx');
+        $this->assertInstanceOf(Ofx::class, $ofx);
+
+        $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
+    }
+
+    /**
+     * @test
+     */
+    public function caixa()
+    {
+        $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_caixa.ofx');
+        $this->assertInstanceOf(Ofx::class, $ofx);
+
+        $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
 }
