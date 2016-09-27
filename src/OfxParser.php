@@ -19,12 +19,12 @@ class OfxParser
         if (file_exists($ofx)) {
             $ofx = file_get_contents($ofx);
         }
-        return $this->loadFromString($ofx);
+        return OfxParser::loadFromString($ofx);
     }
 
-    private function loadFromString($ofxContent)
+    private static function loadFromString($ofxContent)
     {
-        $xml = $this->closeUnclosedXmlTags($ofxContent);
+        $xml = OfxParser::closeUnclosedXmlTags($ofxContent);
         libxml_clear_errors();
         libxml_use_internal_errors(true);
         $xml = simplexml_load_string($xml);
@@ -35,9 +35,9 @@ class OfxParser
         return new Ofx($xml);
     }
 
-    private function closeUnclosedXmlTags($ofxContent)
+    private static function closeUnclosedXmlTags($ofxContent)
     {
-        $lines = $this->ofxToPrepareArray($ofxContent);
+        $lines = OfxParser::ofxToPrepareArray($ofxContent);
         $xml = "";
 
         $lastClosedTag = '';
@@ -65,15 +65,15 @@ class OfxParser
         return $xml;
     }
 
-    private function getOfxPart($ofxFileContent)
+    private static function getOfxPart($ofxFileContent)
     {
         $sgmlStart = stripos($ofxFileContent, '<OFX>');
         return trim(substr($ofxFileContent, $sgmlStart));
     }
 
-    private function ofxToPrepareArray($ofx)
+    private static function ofxToPrepareArray($ofx)
     {
-        $ofxContent = $this->getOfxPart($ofx);
+        $ofxContent = OfxParser::getOfxPart($ofx);
 
         $xml = str_replace("\r", "", $ofxContent);
         $xml = str_replace("\n", "", $xml);

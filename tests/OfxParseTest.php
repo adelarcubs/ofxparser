@@ -19,8 +19,8 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
      */
     public function wrongXmlFormat()
     {
-        $a = new OfxParser('<OFX><root></rot></OFX>');
-        $this->assertNull($a);
+        $ofx = OfxParser::loadOfx('<OFX><root></rot></OFX>');
+        $this->assertNull($ofx);
     }
 
     /**
@@ -31,8 +31,8 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
     {
         // $ofx = Ofx::loadFromFile($file);
         // $this->assertInstanceOf(Ofx::class, $ofx);
-        $parser = new OfxParser($file);
-        $this->assertInstanceOf(Ofx::class, $parser->getOfx());
+        $ofx = OfxParser::loadOfx($file);
+        $this->assertInstanceOf(Ofx::class, $ofx);
     }
 
     public function ofxDataProvider()
