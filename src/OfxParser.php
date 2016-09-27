@@ -1,27 +1,25 @@
 <?php
 namespace Adelarcubs\OFXParser;
 
+/**
+ *
+ * @author Adelar Tiemann Junior <adelar@adelarcubs.com>
+ */
 class OfxParser
 {
-
-    private $ofx;
 
     /**
      *
      * @param mixed $ofx
      *            File or File Path
+     * @return  Ofx
      */
-    public function __construct($ofx)
+    public static function loadOfx($ofx)
     {
         if (file_exists($ofx)) {
             $ofx = file_get_contents($ofx);
         }
         return $this->loadFromString($ofx);
-    }
-
-    public function getOfx()
-    {
-        return $this->ofx;
     }
 
     private function loadFromString($ofxContent)
@@ -34,15 +32,14 @@ class OfxParser
         if (! empty($errors)) {
             throw new \Exception("Failed to parse OFX: " . var_export($errors, true));
         }
-        $this->ofx = new Ofx($xml);
-        return $this->ofx;
+        return new Ofx($xml);
     }
 
     private function closeUnclosedXmlTags($ofxContent)
     {
         $lines = $this->ofxToPrepareArray($ofxContent);
         $xml = "";
-        
+
         $lastClosedTag = '';
         foreach ($lines as $line) {
             if ($line != "") {
@@ -77,11 +74,11 @@ class OfxParser
     private function ofxToPrepareArray($ofx)
     {
         $ofxContent = $this->getOfxPart($ofx);
-        
+
         $xml = str_replace("\r", "", $ofxContent);
         $xml = str_replace("\n", "", $xml);
         $xml = str_replace("<", "\n<", $xml);
-        
+
         return explode("\n", $xml);
     }
 }
