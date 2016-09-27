@@ -2,19 +2,21 @@
   "name" : "adelarcubs/ofxparser",
   "description" : "ofxparser",
   "require" : {
-    "php" : ">=5.5"
+    "php" : ">5.5"
   },
   "require-dev" : {
-    "phpunit/phpunit" : "4.*",
-    "squizlabs/php_codesniffer" : "2.*"
+    "phpunit/phpunit" : "^5.5",
+    "squizlabs/php_codesniffer" : "^2.6"
   },
   "autoload" : {
     "psr-4" : {
       "Adelarcubs\\OFXParser\\": ["src", "test"]
     }
   },
-  "config" : {
-    "optimize-autoloader" : true
-  },
-  "license" : "MIT"
+  "license" : "MIT",
+  "scripts": {
+    "cs": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit"
+  }
 }
