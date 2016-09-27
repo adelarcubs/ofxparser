@@ -5,6 +5,7 @@ use PHPUnit_Framework_TestCase;
 use SimpleXMLElement;
 use Adelarcubs\OFXParser\Ofx;
 use Adelarcubs\OFXParser\OfxParser;
+use Adelarcubs\OFXParser\OfxMovement;
 
 /**
  *
@@ -33,6 +34,8 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
         // $this->assertInstanceOf(Ofx::class, $ofx);
         $ofx = OfxParser::loadOfx($file);
         $this->assertInstanceOf(Ofx::class, $ofx);
+
+        $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
 
     public function ofxDataProvider()
