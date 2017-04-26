@@ -17,7 +17,15 @@ class Ofx
     public function __construct(SimpleXMLElement $xml)
     {
         $this->ofx = $xml;
-        $this->exportMovements($xml->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN);
+
+        if (isset($this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN)) {
+            $movements = $this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN;
+        }
+        if (isset($this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST)) {
+            $movements = $this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST;
+        }
+
+        $this->exportMovements($movements);
     }
 
     public function getMovements()

@@ -56,4 +56,16 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
+
+    /**
+     * @test
+     */
+    public function faturaCC()
+    {
+        $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/fatura_cc_1.ofx');
+
+        $this->assertInstanceOf(Ofx::class, $ofx);
+
+        $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
+    }
 }
