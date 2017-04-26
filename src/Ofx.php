@@ -1,13 +1,14 @@
 <?php
 namespace Adelarcubs\OFXParser;
 
+use JsonSerializable;
 use SimpleXMLElement;
 
 /**
  *
  * @author Adelar Tiemann Junior <adelar@adelarcubs.com>
  */
-class Ofx
+class Ofx implements JsonSerializable
 {
 
     public $ofx;
@@ -38,5 +39,10 @@ class Ofx
         foreach ($xml as $value) {
             $this->movements[] = new OfxMovement($value);
         }
+    }
+
+    public function jsonSerialize()
+    {
+        return json_decode(json_encode($this->ofx), true);
     }
 }
