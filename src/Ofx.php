@@ -23,7 +23,7 @@ class Ofx implements JsonSerializable
             $movements = $this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN;
         }
         if (isset($this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST)) {
-            $movements = $this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST;
+            $movements = $this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST->STMTTRN;
         }
 
         $this->exportMovements($movements);
