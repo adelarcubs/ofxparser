@@ -31,6 +31,7 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
     {
         $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_itau.ofx');
         $this->assertInstanceOf(Ofx::class, $ofx);
+        $this->assertInternalType('array', $ofx->jsonSerialize());
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
@@ -42,6 +43,7 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
     {
         $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_santander.ofx');
         $this->assertInstanceOf(Ofx::class, $ofx);
+        $this->assertInternalType('array', $ofx->jsonSerialize());
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
@@ -53,6 +55,7 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
     {
         $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_caixa.ofx');
         $this->assertInstanceOf(Ofx::class, $ofx);
+        $this->assertInternalType('array', $ofx->jsonSerialize());
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
@@ -63,8 +66,8 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
     public function faturaCC()
     {
         $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/fatura_cc_1.ofx');
-
         $this->assertInstanceOf(Ofx::class, $ofx);
+        $this->assertInternalType('array', $ofx->jsonSerialize());
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
