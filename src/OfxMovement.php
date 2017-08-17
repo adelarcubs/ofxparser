@@ -28,7 +28,7 @@ class OfxMovement
         $this->document = (string) $xml->FITID;
         $this->description = (string) $xml->MEMO;
         $this->amount = (float) str_replace(',', '.', $xml->TRNAMT);
-        $this->dueDate = new DateTime(substr($xml->DTPOSTED, 0, 8));
+        $this->dueDate = new DateTime(substr((string) $xml->DTPOSTED, 0, 8));
     }
 
     public function getType(): string
