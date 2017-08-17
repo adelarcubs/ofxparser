@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace Adelarcubs\OFXParser;
 
 use JsonSerializable;
@@ -29,12 +30,12 @@ class Ofx implements JsonSerializable
         $this->exportMovements($movements);
     }
 
-    public function getMovements()
+    public function getMovements(): array
     {
         return $this->movements;
     }
 
-    private function exportMovements(SimpleXMLElement $xml)
+    private function exportMovements(SimpleXMLElement $xml): void
     {
         foreach ($xml as $value) {
             $this->movements[] = new OfxMovement($value);

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace Adelarcubs\OFXParser;
 
 /**
@@ -12,7 +13,7 @@ class OfxParser
      *
      * @param mixed $ofx
      *            File or File Path
-     * @return  Ofx
+     * @return Ofx
      */
     public static function loadOfx($ofx)
     {
