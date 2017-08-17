@@ -79,6 +79,7 @@ class OfxParser
         $xml = str_replace("\r", "", $ofxContent);
         $xml = str_replace("\n", "", $xml);
         $xml = str_replace("<", "\n<", $xml);
+        $xml = str_replace('&', '', $xml);
 
         return explode("\n", $xml);
     }
