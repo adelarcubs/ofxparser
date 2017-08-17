@@ -31,7 +31,7 @@ class OfxParser
         $xml = simplexml_load_string($xml);
         $errors = libxml_get_errors();
         if (! empty($errors)) {
-            throw new \Exception("Failed to parse OFX: " . var_export($errors, true));
+            throw new \Exception('Failed to parse OFX: ' . var_export($errors, true));
         }
         return new Ofx($xml);
     }
@@ -39,13 +39,13 @@ class OfxParser
     private static function closeUnclosedXmlTags($ofxContent)
     {
         $lines = OfxParser::ofxToPrepareArray($ofxContent);
-        $xml = "";
+        $xml = '';
 
         $lastClosedTag = '';
         foreach ($lines as $line) {
-            if ($line != "") {
+            if ($line != '') {
                 $read = $line;
-                $pos = strpos($read, ">");
+                $pos = strpos($read, '>');
                 $tag = substr($read, 1, $pos);
                 $value = trim(substr($read, $pos + 1));
                 $line = '<' . $tag;
