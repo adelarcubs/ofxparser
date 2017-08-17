@@ -12,7 +12,7 @@ use SimpleXMLElement;
 class Ofx implements JsonSerializable
 {
 
-    public $ofx;
+    private $ofx;
 
     private $movements = [];
 
