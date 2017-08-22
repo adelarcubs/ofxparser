@@ -35,7 +35,7 @@ class Ofx implements JsonSerializable
         return $this->movements;
     }
 
-    private function exportMovements(SimpleXMLElement $xml): void
+    private function exportMovements(SimpleXMLElement $xml)
     {
         foreach ($xml as $value) {
             $this->movements[] = new OfxMovement($value);
