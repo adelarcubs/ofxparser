@@ -26,6 +26,7 @@ class OfxParser
     private static function loadFromString($ofxContent)
     {
         $xml = OfxParser::closeUnclosedXmlTags($ofxContent);
+        $xml = mb_convert_encoding($xml, 'UTF-8');
         libxml_clear_errors();
         libxml_use_internal_errors(true);
         $xml = simplexml_load_string($xml);

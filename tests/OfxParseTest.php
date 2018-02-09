@@ -71,4 +71,16 @@ class OfxParseTest extends PHPUnit_Framework_TestCase
 
         $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
     }
+
+    /**
+     * @test
+     */
+    public function itauIso()
+    {
+        $ofx = OfxParser::loadOfx(__DIR__ . '/fixtures/extrato_itau_iso.ofx');
+        $this->assertInstanceOf(Ofx::class, $ofx);
+        $this->assertInternalType('array', $ofx->jsonSerialize());
+
+        $this->assertContainsOnlyInstancesOf(OfxMovement::class, $ofx->getMovements());
+    }
 }
