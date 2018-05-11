@@ -17,8 +17,7 @@ class OfxMovementTest extends PHPUnit_Framework_TestCase
      */
     public function construct()
     {
-        $xml = simplexml_load_string('<OFX><TRNTYPE>DEBIT</TRNTYPE><FITID>123</FITID><MEMO>Alguma Descrição</MEMO><TRNAMT>123,99</TRNAMT><DTPOSTED>20160102</DTPOSTED></OFX>');
-        $ofxMovement = new OfxMovement($xml);
+        $ofxMovement = new OfxMovement('DEBIT', '123', 'Alguma Descrição', 123.99, new DateTime());
 
         $this->assertInstanceOf(OfxMovement::class, $ofxMovement);
 

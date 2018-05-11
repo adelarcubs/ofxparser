@@ -16,9 +16,12 @@ class Ofx implements JsonSerializable
 
     private $movements = [];
 
-    public function __construct(SimpleXMLElement $xml)
+    private $parser;
+
+    public function __construct(SimpleXMLElement $xml, AbstractParser $parser)
     {
         $this->ofx = $xml;
+        $this->parser = $parser;
 
         if (isset($this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN)) {
             $movements = $this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN;
@@ -38,7 +41,7 @@ class Ofx implements JsonSerializable
     private function exportMovements(SimpleXMLElement $xml)
     {
         foreach ($xml as $value) {
-            $this->movements[] = new OfxMovement($value);
+            $this->movements[] = $this->parser->parseXml($value);
         }
     }
 

@@ -2,7 +2,6 @@
 declare(strict_types = 1);
 namespace Adelarcubs\OFXParser;
 
-use SimpleXMLElement;
 use DateTime;
 
 /**
@@ -22,13 +21,13 @@ class OfxMovement
 
     private $dueDate;
 
-    public function __construct(SimpleXMLElement $xml)
+    public function __construct(string $type, string $document, string $description, float $amount, DateTime $dueDate)
     {
-        $this->type = (string) $xml->TRNTYPE;
-        $this->document = (string) $xml->FITID;
-        $this->description = (string) $xml->MEMO;
-        $this->amount = (float) str_replace(',', '.', $xml->TRNAMT);
-        $this->dueDate = new DateTime(substr((string) $xml->DTPOSTED, 0, 8));
+        $this->type = $type;
+        $this->document = $document;
+        $this->description = $description;
+        $this->amount = $amount;
+        $this->dueDate = $dueDate;
     }
 
     public function getType(): string

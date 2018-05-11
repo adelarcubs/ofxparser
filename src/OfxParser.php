@@ -2,6 +2,8 @@
 declare(strict_types = 1);
 namespace Adelarcubs\OFXParser;
 
+use Adelarcubs\OFXParser\Parser\BaseParser;
+
 /**
  *
  * @author Adelar Tiemann Junior <adelar@adelarcubs.com>
@@ -15,15 +17,18 @@ class OfxParser
      *            File or File Path
      * @return Ofx
      */
-    public static function loadOfx($ofx)
+    public static function loadOfx($ofx, AbstractParser $parser = null)
     {
         if (file_exists($ofx)) {
             $ofx = file_get_contents($ofx);
         }
-        return OfxParser::loadFromString($ofx);
+        if (! $parser) {
+            $parser = new BaseParser();
+        }
+        return OfxParser::loadFromString($ofx, $parser);
     }
 
-    private static function loadFromString($ofxContent)
+    private static function loadFromString($ofxContent, AbstractParser $parser)
     {
         $xml = OfxParser::closeUnclosedXmlTags($ofxContent);
         $xml = mb_convert_encoding($xml, 'UTF-8');
@@ -34,7 +39,7 @@ class OfxParser
         if (! empty($errors)) {
             throw new \Exception('Failed to parse OFX: ' . var_export($errors, true));
         }
-        return new Ofx($xml);
+        return new Ofx($xml, $parser);
     }
 
     private static function closeUnclosedXmlTags($ofxContent)
