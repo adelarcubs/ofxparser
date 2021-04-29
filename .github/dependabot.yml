@@ -1,0 +1,21 @@
+version: 2
+registries:
+  git-bitbucket-org:
+    type: git
+    url: https://bitbucket.org
+    username: adelarcubs
+    password: "${{secrets.GIT_BITBUCKET_ORG_PASSWORD}}"
+
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: squizlabs/php_codesniffer
+    versions:
+    - 3.5.8
+  registries:
+  - git-bitbucket-org
