@@ -3,6 +3,7 @@ declare(strict_types = 1);
 namespace Adelarcubs\OFXParser;
 
 use Adelarcubs\OFXParser\Parser\BaseParser;
+use Adelarcubs\OFXParser\Exception\OfxParseException;
 
 /**
  *
@@ -17,7 +18,7 @@ class OfxParser
      *            File or File Path
      * @return Ofx
      */
-    public static function loadOfx($ofx, AbstractParser $parser = null)
+    public static function loadOfx(string $ofx, AbstractParser $parser = null)
     {
         if (file_exists($ofx)) {
             $ofx = file_get_contents($ofx);
@@ -37,7 +38,7 @@ class OfxParser
         $xml = simplexml_load_string($xml);
         $errors = libxml_get_errors();
         if (! empty($errors)) {
-            throw new \Exception('Failed to parse OFX: ' . var_export($errors, true));
+            throw new OfxParseException('Failed to parse OFX: ' . var_export($errors, true));
         }
         return new Ofx($xml, $parser);
     }

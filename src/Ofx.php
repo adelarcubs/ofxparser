@@ -4,6 +4,7 @@ namespace Adelarcubs\OFXParser;
 
 use JsonSerializable;
 use SimpleXMLElement;
+use Adelarcubs\OFXParser\Exception\OfxParseException;
 
 /**
  *
@@ -22,12 +23,16 @@ class Ofx implements JsonSerializable
     {
         $this->ofx = $xml;
         $this->parser = $parser;
+        $movements = null;
 
         if (isset($this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN)) {
             $movements = $this->ofx->BANKMSGSRSV1->STMTTRNRS->STMTRS->BANKTRANLIST->STMTTRN;
         }
         if (isset($this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST)) {
             $movements = $this->ofx->CREDITCARDMSGSRSV1->CCSTMTTRNRS->CCSTMTRS->BANKTRANLIST->STMTTRN;
+        }
+        if ($movements === null) {
+            throw new OfxParseException('Not a valid OFX File');
         }
 
         $this->exportMovements($movements);
@@ -45,7 +50,7 @@ class Ofx implements JsonSerializable
         }
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return json_decode(json_encode($this->ofx), true);
     }
