@@ -1,7 +1,7 @@
 <?php
 namespace Adelarcubs\OFXParser;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Adelarcubs\OFXParser\OfxMovement;
 use DateTime;
 
@@ -9,10 +9,11 @@ use DateTime;
  *
  * @author Adelar Tiemann Junior <adelar@adelarcubs.com>
  */
-class OfxMovementTest extends PHPUnit_Framework_TestCase
+class OfxMovementTest extends TestCase
 {
 
     /**
+     *
      * @test
      */
     public function construct()
