@@ -45,7 +45,7 @@ class Ofx implements JsonSerializable
         }
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): string
     {
         return json_decode(json_encode($this->ofx), true);
     }
